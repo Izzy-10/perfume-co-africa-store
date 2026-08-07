@@ -139,14 +139,66 @@ function buildWhatsAppMessage() {
   return msg;
 }
 
-document.getElementById("checkoutBtn").addEventListener("click", () => {
-  if (cart.length === 0) {
-    alert("Your cart is empty — add a scent first.");
-    return;
-  }
-  const message = encodeURIComponent(buildWhatsAppMessage());
-  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, "_blank");
-});
+const checkoutBtn = document.getElementById("checkoutBtn");
+if (checkoutBtn) {
+  checkoutBtn.addEventListener("click", () => {
+    if (cart.length === 0) {
+      alert("Your cart is empty — add a scent first.");
+      return;
+    }
+    const message = encodeURIComponent(buildWhatsAppMessage());
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, "_blank");
+  });
+}
+
+// ---- HERO SLIDER ----
+// Swap these three lines with real photos of Nontobeko / customers / cars later.
+const heroLines = ["just for you..", "made for him.."];
+let heroIndex = 0;
+
+function rotateHero() {
+  const slides = document.querySelectorAll(".hero-slide");
+  const textEl = document.getElementById("heroRotating");
+  if (!slides.length || !textEl) return;
+
+  heroIndex = (heroIndex + 1) % slides.length;
+  slides.forEach((s, i) => s.classList.toggle("active", i === heroIndex));
+
+  textEl.style.animation = "none";
+  textEl.offsetHeight; // restart animation
+  textEl.textContent = heroLines[heroIndex % heroLines.length];
+  textEl.style.animation = "heroTextFade 0.6s ease";
+}
+
+setInterval(rotateHero, 4000);
+
+// ---- BOOK ONE-ON-ONE SESSION ----
+const bookSessionBtn = document.getElementById("bookSessionBtn");
+if (bookSessionBtn) {
+  bookSessionBtn.addEventListener("click", () => {
+    const message = encodeURIComponent(
+      "Hi Nontobeko! I'd like to book a one-on-one session to learn about joining The Perfume Co. Africa / Dream Team."
+    );
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, "_blank");
+  });
+}
+
+// ---- CONTACT FORM ----
+const contactForm = document.getElementById("contactForm");
+if (contactForm) {
+  contactForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const name = document.getElementById("contactName").value.trim();
+    const phone = document.getElementById("contactPhone").value.trim();
+    const messageText = document.getElementById("contactMessage").value.trim();
+
+    const fullMessage =
+      `Hi Nontobeko, my name is ${name} (${phone}).\n\n${messageText}`;
+
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(fullMessage)}`, "_blank");
+    e.target.reset();
+  });
+}
 
 // ---- CART DRAWER TOGGLE ----
 const cartDrawer = document.getElementById("cartDrawer");

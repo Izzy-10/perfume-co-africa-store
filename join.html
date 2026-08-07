@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Join Dream Team — The Perfume Co. Africa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">THE PERFUME CO.</span>
+      <span class="logo-sub">AFRICA</span>
+    </a>
+    <nav class="cat-nav">
+      <a href="index.html">Home</a>
+      <a href="index.html#for-her">For Her</a>
+      <a href="index.html#for-him">For Him</a>
+      <a href="join.html">Join DT</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <button class="cart-btn" id="cartBtn" aria-label="Open cart">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="21" r="1.4"/><circle cx="18" cy="21" r="1.4"/><path d="M2 3h2l2.6 12.4a2 2 0 0 0 2 1.6h8.8a2 2 0 0 0 2-1.6L21 7H6"/></svg>
+      <span id="cartCount">0</span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <section class="join-section join-hero" id="join">
+    <div class="join-inner">
+      <img src="assets/dt-badge.png" alt="Dream Team DT badge" class="dt-badge dt-badge-large">
+      <p class="join-eyebrow">We are Dream Team — DT</p>
+      <h1>Join The Perfume Co. Africa</h1>
+      <p class="join-copy">Become a reseller and earn passive income selling fragrances people already love. Nontobeko will walk you through stock, pricing, and how payouts work.</p>
+
+      <div class="join-fees">
+        <div class="fee-card">
+          <span class="fee-amount">R99</span>
+          <span class="fee-label">Registration fee (once-off)</span>
+        </div>
+        <div class="fee-card">
+          <span class="fee-amount">R499</span>
+          <span class="fee-label">Minimum stock order</span>
+        </div>
+      </div>
+
+      <ul class="benefits-list">
+        <li>100% to 160% retail profit</li>
+        <li>22% referral bonus from direct recruits</li>
+        <li>Monthly team bonuses</li>
+        <li>Earn up to 5 levels deep</li>
+        <li>Rank-up bonuses</li>
+        <li>All-expenses-paid international vacations</li>
+      </ul>
+
+      <a href="#book" class="join-cta">Book Your One-on-One Session ↓</a>
+    </div>
+  </section>
+
+  <section class="stock-section" id="stock">
+    <div class="stock-inner">
+      <p class="join-eyebrow">One Range, Two Sizes</p>
+      <h2>Stock That Sells Itself</h2>
+      <p class="stock-copy">Every scent comes in <strong>His</strong> and <strong>Hers</strong>, at the same reseller price, in two sizes — so whatever a customer's budget, you've got something to hand them.</p>
+
+      <div class="stock-cards">
+        <div class="stock-card">
+          <span class="stock-size">50ml</span>
+          <div class="stock-row"><span>Buy 5 for</span><b>R499</b></div>
+          <div class="stock-row"><span>Sell each for</span><b>R250</b></div>
+          <div class="stock-row highlight"><span>Total sales</span><b>R1,250</b></div>
+        </div>
+
+        <div class="stock-card">
+          <span class="stock-size">30ml</span>
+          <div class="stock-row"><span>Buy 10 for</span><b>R426</b></div>
+          <div class="stock-row"><span>Sell each for</span><b>R120</b></div>
+          <div class="stock-row highlight"><span>Total sales</span><b>R1,200</b></div>
+        </div>
+      </div>
+
+      <p class="stock-note">Same pricing whether you're stocking His or Hers — restock whichever size moves faster for you.</p>
+    </div>
+  </section>
+
+  <section class="book-section" id="book">
+    <div class="book-inner">
+      <h2>Book Your One-on-One Session</h2>
+      <p class="book-copy">Sit down with Nontobeko Sibiya to go through the Dream Team opportunity, stock options, and how to get started — no pressure, just the details.</p>
+      <div class="book-contact">
+        <span class="book-name">Nontobeko Sibiya</span>
+        <span class="book-phone">079 049 4266</span>
+      </div>
+      <button id="bookSessionBtn" class="checkout-btn book-btn">Book on WhatsApp</button>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p class="footer-brand">THE PERFUME CO. AFRICA</p>
+  <p>Run by Nontobeko Sibiya · Orders confirmed and paid for via WhatsApp</p>
+</footer>
+
+<!-- Cart Drawer -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="cart-drawer-head">
+    <h3>Your Order</h3>
+    <button id="closeCart" aria-label="Close cart">&times;</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <p class="cart-empty">Your cart is empty. Add a scent to get started.</p>
+  </div>
+  <div class="cart-footer">
+    <div class="cart-total-row">
+      <span>Total</span>
+      <span id="cartTotal">R0</span>
+    </div>
+    <button id="checkoutBtn" class="checkout-btn">Checkout on WhatsApp</button>
+    <p class="cart-note">You'll message Nontobeko directly to confirm payment and delivery.</p>
+  </div>
+</aside>
+
+<script src="products.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
