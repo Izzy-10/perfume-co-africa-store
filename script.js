@@ -135,7 +135,15 @@ function buildWhatsAppMessage() {
   cart.forEach(item => {
     msg += `• ${item.name} x${item.qty} — R${item.price * item.qty}\n`;
   });
-  msg += `\nTotal: R${cartTotal()}\n\nPlease confirm stock, payment, and delivery. Thank you!`;
+  msg += `\nTotal: R${cartTotal()}`;
+
+  const locationEl = document.getElementById("deliveryLocation");
+  const location = locationEl ? locationEl.value.trim() : "";
+  if (location) {
+    msg += `\nMy location: ${location}`;
+  }
+
+  msg += `\n\nPlease confirm stock, payment, and delivery fee. Thank you!`;
   return msg;
 }
 
