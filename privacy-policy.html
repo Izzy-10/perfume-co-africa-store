@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — The Perfume Co. Africa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <a href="index.html" class="logo">
+      <span class="logo-mark">THE PERFUME CO.</span>
+      <span class="logo-sub">AFRICA</span>
+    </a>
+    <nav class="cat-nav">
+      <a href="index.html">Home</a>
+      <a href="index.html#for-her">For Her</a>
+      <a href="index.html#for-him">For Him</a>
+      <a href="join.html">Join DT</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <button class="cart-btn" id="cartBtn" aria-label="Open cart">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="21" r="1.4"/><circle cx="18" cy="21" r="1.4"/><path d="M2 3h2l2.6 12.4a2 2 0 0 0 2 1.6h8.8a2 2 0 0 0 2-1.6L21 7H6"/></svg>
+      <span id="cartCount">0</span>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="index.html">Home</a>
+    <a href="index.html#for-her">For Her</a>
+    <a href="index.html#for-him">For Him</a>
+    <a href="join.html">Join DT</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="legal-page">
+    <div class="legal-inner">
+      <p class="overview-eyebrow">— Legal —</p>
+      <h1>Privacy Policy</h1>
+      <p class="legal-updated">Last updated: August 2026</p>
+
+      <p>The Perfume Co. Africa (run by Nontobeko Sibiya, "we", "us") respects your privacy. This page explains what information we collect through this website and how it's used.</p>
+
+      <h2>What we collect</h2>
+      <p>When you use the cart, contact form, or "Book a Session" button, we collect what you choose to share: your name, phone number, the products you're ordering, your delivery location, and any message you send. This information is sent directly to Nontobeko via WhatsApp — it is not stored on this website or on any server.</p>
+
+      <h2>How we use it</h2>
+      <ul class="legal-list">
+        <li>To confirm your order, pricing, and stock availability</li>
+        <li>To arrange payment and calculate delivery fees based on your location</li>
+        <li>To respond to general enquiries or Dream Team reseller questions</li>
+      </ul>
+
+      <h2>Payments</h2>
+      <p>This website does not process or store any payment information. All payment arrangements are made directly between you and Nontobeko Sibiya via WhatsApp.</p>
+
+      <h2>Cart data</h2>
+      <p>Items you add to your cart are stored only in your own browser (using local storage) so your selection is remembered if you return. This data stays on your device and is never transmitted anywhere unless you tap "Checkout on WhatsApp."</p>
+
+      <h2>Third parties</h2>
+      <p>We do not sell or share your information with third parties. Messages sent via WhatsApp are subject to WhatsApp's own privacy policy.</p>
+
+      <h2>Contact</h2>
+      <p>Questions about this policy or your information can be sent directly to Nontobeko Sibiya on WhatsApp, or by post to:</p>
+      <p class="legal-address">Ward 19, Emabhanoyini, Jozini, 3969</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p class="footer-brand">THE PERFUME CO. AFRICA</p>
+  <p>Run by Nontobeko Sibiya · Orders confirmed and paid for via WhatsApp</p>
+  <p class="footer-address">Ward 19, Emabhanoyini, Jozini, 3969</p>
+  <p class="footer-links"><a href="privacy-policy.html">Privacy Policy</a></p>
+</footer>
+
+<!-- Cart Drawer -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="cart-drawer-head">
+    <h3>Your Order</h3>
+    <button id="closeCart" aria-label="Close cart">&times;</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <p class="cart-empty">Your cart is empty. Add a scent to get started.</p>
+  </div>
+  <div class="cart-footer">
+    <div class="cart-total-row">
+      <span>Total</span>
+      <span id="cartTotal">R0</span>
+    </div>
+
+    <div class="payment-options">
+      <span class="payment-label">Payment Options</span>
+      <label for="deliveryLocation">Your location</label>
+      <input type="text" id="deliveryLocation" placeholder="e.g. suburb, town">
+      <p class="payment-note">Payment and delivery fees are arranged directly with Nontobeko on WhatsApp based on your location.</p>
+    </div>
+
+    <button id="checkoutBtn" class="checkout-btn">Checkout on WhatsApp</button>
+    <p class="cart-note">You'll message Nontobeko directly to confirm payment and delivery.</p>
+  </div>
+</aside>
+
+<script src="products.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
+
