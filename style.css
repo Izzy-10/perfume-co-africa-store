@@ -39,9 +39,8 @@ a { color: inherit; text-decoration: none; }
   justify-content: space-between;
   gap: 16px;
 }
-.logo { display: flex; flex-direction: column; line-height: 1; }
-.logo-mark { font-family: var(--font-display); font-weight: 600; font-size: 1.15rem; letter-spacing: 0.03em; }
-.logo-sub { font-size: 0.62rem; letter-spacing: 0.35em; color: var(--gold); margin-top: 3px; }
+.logo { display: flex; align-items: center; }
+.logo-img { height: 42px; width: auto; display: block; }
 .cat-nav { display: none; gap: 28px; font-size: 0.85rem; letter-spacing: 0.03em; }
 .cat-nav a { opacity: 0.8; transition: opacity 0.2s; }
 .cat-nav a:hover { opacity: 1; color: var(--gold-soft); }
@@ -359,13 +358,23 @@ a { color: inherit; text-decoration: none; }
   background: var(--black);
   color: var(--cream);
   border-radius: 8px;
-  padding: 26px 28px;
+  overflow: hidden;
   min-width: 220px;
   flex: 1;
   max-width: 260px;
   text-align: left;
   border: 1px solid rgba(201,162,75,0.3);
 }
+.stock-photo {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+.stock-card > .stock-size,
+.stock-card > .stock-row { padding-left: 28px; padding-right: 28px; }
+.stock-card > .stock-size { padding-top: 20px; }
+.stock-card > .stock-row.highlight { padding-bottom: 20px; }
 .stock-size {
   display: inline-block;
   font-family: var(--font-display);
