@@ -1,7 +1,5 @@
-// REAL PRODUCTS — The Perfume Co. Africa's full price list.
-// Photos still needed for: Car Diffuser, Home Refill, Scented Lotion,
-// Roll On, Pure Collagen — using placeholder images until Sizwe uploads
-// real product photos. Home Diffuser uses the real photo already on hand.
+// REAL PRODUCTS — The Perfume Co. Africa's full price list, all with
+// real product photos.
 
 const PRODUCTS = [
   {
@@ -41,7 +39,7 @@ const PRODUCTS = [
     category: "Car Diffusers",
     name: "Car Diffuser (8ml)",
     price: 75,
-    image: "https://picsum.photos/seed/cardiffuser8/600/700",
+    image: "assets/product-car-diffuser.webp",
     notes: { top: "", heart: "", base: "" }
   },
   {
@@ -55,25 +53,25 @@ const PRODUCTS = [
   {
     id: "home-refill-200",
     category: "Home Refill",
-    name: "Home Diffuser Refill (200ml)",
+    name: "Home Diffuser Refill (100ml)",
     price: 250,
-    image: "https://picsum.photos/seed/homerefill200/600/700",
+    image: "assets/product-home-refill.webp",
     notes: { top: "", heart: "", base: "" }
   },
   {
     id: "scented-lotion-250",
     category: "Scented Lotion",
-    name: "Scented Lotion (250ml)",
+    name: "Perfumed Body Lotion (250ml)",
     price: 180,
-    image: "https://picsum.photos/seed/scentedlotion250/600/700",
+    image: "assets/product-lotion.jpg",
     notes: { top: "", heart: "", base: "" }
   },
   {
     id: "roll-on-50",
     category: "Roll On",
-    name: "Roll On (50ml)",
+    name: "Anti-Perspirant Deodorant Roll On (50ml)",
     price: 70,
-    image: "https://picsum.photos/seed/rollon50/600/700",
+    image: "assets/product-rollon.webp",
     notes: { top: "", heart: "", base: "" }
   },
   {
@@ -81,7 +79,7 @@ const PRODUCTS = [
     category: "Pure Collagen",
     name: "Pure Collagen (250g)",
     price: 300,
-    image: "https://picsum.photos/seed/purecollagen250/600/700",
+    image: "assets/product-collagen.webp",
     notes: { top: "", heart: "", base: "" }
   }
 ];
