@@ -173,6 +173,60 @@ a { color: inherit; text-decoration: none; }
   .hero h1 #heroRotating { animation: none; }
 }
 
+/* ---- Trust Strip ---- */
+.trust-strip {
+  background: var(--black);
+  border-top: 1px solid rgba(201,162,75,0.15);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px 32px;
+  padding: 18px 24px;
+}
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--gold-soft);
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+.trust-item svg { flex-shrink: 0; color: var(--gold); }
+
+/* ---- How It Works ---- */
+.how-it-works {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 24px 8px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px 8px;
+}
+.how-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  min-width: 90px;
+}
+.how-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid rgba(201,162,75,0.4);
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--brown-mid);
+}
+.how-label { font-size: 0.76rem; font-weight: 700; letter-spacing: 0.02em; text-align: center; color: var(--black); max-width: 100px; }
+.how-arrow { color: var(--gold); font-size: 1.1rem; margin: 0 2px; align-self: center; margin-top: -20px; }
+@media (max-width: 560px) { .how-arrow { display: none; } }
+
 /* ---- Products Overview ---- */
 .products-overview {
   max-width: 720px;
@@ -221,6 +275,62 @@ a { color: inherit; text-decoration: none; }
 .overview-text { display: flex; flex-direction: column; gap: 3px; }
 .overview-name { font-family: var(--font-display); font-weight: 600; font-size: 1.15rem; color: var(--black); }
 .overview-sub { font-size: 0.85rem; color: var(--taupe); }
+
+/* ---- FAQ ---- */
+.faq-section { max-width: 680px; margin: 0 auto; padding: 64px 24px 8px; text-align: center; }
+.faq-list { text-align: left; margin-top: 8px; }
+.faq-item {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding: 16px 4px;
+}
+.faq-item summary {
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.98rem;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "+";
+  font-size: 1.3rem;
+  color: var(--gold);
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-item p { font-size: 0.88rem; color: var(--taupe); margin-top: 10px; line-height: 1.55; }
+.faq-item p a { color: var(--brown-mid); text-decoration: underline; }
+
+/* ---- Testimonials ---- */
+.testimonials-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 64px 24px 8px;
+  text-align: center;
+}
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-top: 8px;
+}
+@media (min-width: 760px) { .testimonial-grid { grid-template-columns: repeat(3, 1fr); } }
+
+.testimonial-card {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 8px;
+  padding: 26px 22px;
+  text-align: left;
+}
+.stars { color: var(--gold); font-size: 0.95rem; letter-spacing: 2px; margin-bottom: 12px; }
+.testimonial-quote { font-size: 0.9rem; color: #333; line-height: 1.55; margin-bottom: 14px; font-style: italic; }
+.testimonial-name { font-family: var(--font-display); font-weight: 600; font-size: 0.88rem; color: var(--brown-mid); }
 
 /* ---- Category sections ---- */
 .category { max-width: 1200px; margin: 0 auto; padding: 56px 24px 8px; scroll-margin-top: 80px; }
@@ -446,6 +556,25 @@ a { color: inherit; text-decoration: none; }
 .contact-form input:focus,
 .contact-form textarea:focus { outline: 2px solid var(--gold); outline-offset: 1px; }
 .contact-form button { margin-top: 18px; }
+
+/* ---- Floating WhatsApp Button ---- */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 56px;
+  height: 56px;
+  background: #25D366;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+  z-index: 70;
+  transition: transform 0.2s;
+}
+.whatsapp-float:hover { transform: scale(1.08); }
 
 /* ---- Legal Page ---- */
 .legal-page { max-width: 640px; margin: 0 auto; padding: 56px 24px 64px; }
